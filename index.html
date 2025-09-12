@@ -999,50 +999,108 @@ header > * {
     });
   </script>
 <script>
-/* Default (for laptops & desktops) */
-body {
-  font-size: 18px;
-  padding: 20px;
+@media screen and (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    margin: 8px;
+    font-size: 1rem;
+  }
+
+  .teacher-card-container {
+    gap: 30px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-/* Mobile (screens up to 768px wide) */
-@media (max-width: 768px) {
+/* 📱 Mobiles (≤768px) */
+@media screen and (max-width: 768px) {
   body {
-    font-size: 14px; /* smaller text */
-    padding: 10px;
+    font-size: 14px;
+    padding: 0 10px;
   }
 
-  .container {
-    flex-direction: column; /* stack items */
+  header h1 {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  .logo {
+    height: 180px;
+    max-width: 90%;
+  }
+
+  .navbar, nav {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+    font-size: 0.95rem;
+  }
+
+  .teacher-card-container {
+    flex-direction: column;
     align-items: center;
+    gap: 25px;
   }
 
-  img {
-    max-width: 100%; /* images fit screen */
-    height: auto;
+  .teacher-card {
+    width: 90%;
+    max-width: 400px;
   }
-  /* Mobile first */
-.container {
-  flex-direction: column;
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 220px;
+  }
 }
 
-/* For laptops & bigger screens */
-@media (min-width: 1024px) {
-  .container {
-    flex-direction: row;
-  }
-}
+/* 📱 Extra Small Phones (≤480px) */
+@media screen and (max-width: 480px) {
+  h1 { font-size: 1.4rem; }
+  h2 { font-size: 1.1rem; }
+  p { font-size: 0.85rem; }
 
+  .logo { height: 150px; }
+
+  nav a {
+    font-size: 0.9rem;
+    margin: 6px 0;
+  }
+
+  .teacher-card {
+    padding: 15px;
+  }
+
+  iframe {
+    height: 180px;
+  }
 }
 </script>
 
 
 </body>
 </html>
+
 
