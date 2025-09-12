@@ -998,6 +998,38 @@ header > * {
       once: true      // Animation occurs only once
     });
   </script>
+<script>
+/* Default (for laptops & desktops) */
+body {
+  font-size: 18px;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Mobile (screens up to 768px wide) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* smaller text */
+    padding: 10px;
+  }
+
+  .container {
+    flex-direction: column; /* stack items */
+    align-items: center;
+  }
+
+  img {
+    max-width: 100%; /* images fit screen */
+    height: auto;
+  }
+}
+</script>
+
 
 </body>
 </html>
