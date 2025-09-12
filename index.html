@@ -1027,9 +1027,22 @@ body {
     max-width: 100%; /* images fit screen */
     height: auto;
   }
+  /* Mobile first */
+.container {
+  flex-direction: column;
+}
+
+/* For laptops & bigger screens */
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
 }
 </script>
 
 
 </body>
 </html>
+
